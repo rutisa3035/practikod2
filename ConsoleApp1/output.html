@@ -1,0 +1,31 @@
+﻿
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        // יצירת HTML לדוגמה
+        string htmlOutput = @"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Page</title>
+</head>
+<body>
+    <div>
+        <div>
+            <p class='class-name'>This is a paragraph.</p>
+        </div>
+    </div>
+</body>
+</html>";
+
+        // שמירת HTML לקובץ שיצרת בפרויקט
+        string filePath = "output.html"; // אם זה קובץ אחר בפרויקט, שימי את הנתיב המלא
+        File.WriteAllText(filePath, htmlOutput);
+
+        Console.WriteLine($"HTML saved to {filePath}");
+    }
+}
